@@ -8,7 +8,8 @@ public enum ServerRule {
     VOICE_ENABLED("voiceEnabled", Boolean.class),
     MINIMAP_STATUS("minimapStatus", String.class),
     SERVER_HANDLES_WAYPOINTS("serverHandlesWaypoints", Boolean.class),
-    COMPETITIVE_GAMEMODE("competitiveGame", Boolean.class);
+    COMPETITIVE_GAMEMODE("competitiveGame", Boolean.class),
+    LEGACY_COMBAT("legacyCombat", Boolean.class);
 
     private final String rule;
     private final Class value;
