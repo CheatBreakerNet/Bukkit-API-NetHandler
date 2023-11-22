@@ -9,7 +9,8 @@ public enum ServerRule {
     MINIMAP_STATUS("minimapStatus", String.class),
     SERVER_HANDLES_WAYPOINTS("serverHandlesWaypoints", Boolean.class),
     COMPETITIVE_GAMEMODE("competitiveGame", Boolean.class),
-    LEGACY_COMBAT("legacyCombat", Boolean.class);
+    LEGACY_COMBAT("legacyCombat", Boolean.class),
+    FORCE_DISABLE_FAST_MATH("forceDisableFastMath", Boolean.class);
 
     private final String rule;
     private final Class value;
