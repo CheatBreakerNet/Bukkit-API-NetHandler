@@ -1,0 +1,22 @@
+name: Dispatch to repo
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+            - repo: CheatBreakerNet/Bukkit-API
+              branch: main
+    steps:
+      - name: Push to repo
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: ${{ matrix.repo }}
+          event-type: update
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}", "module": "NetHandler", "branch": "${{ matrix.branch }}"}'
