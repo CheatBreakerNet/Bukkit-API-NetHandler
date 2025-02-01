@@ -32,7 +32,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
+            <version>1.18.32</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -42,7 +42,7 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.0.10.Final</version>
+            <version>4.1.42.Final</version>
         </dependency>
     </dependencies>
 
