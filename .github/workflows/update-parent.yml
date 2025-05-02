@@ -1,8 +1,5 @@
 name: Dispatch to repo
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 jobs:
   dispatch:
