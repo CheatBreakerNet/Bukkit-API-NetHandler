@@ -2,18 +2,18 @@ package com.cheatbreaker.nethandler;
 
 import com.google.common.base.Charsets;
 import io.netty.buffer.ByteBuf;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+@RequiredArgsConstructor @Getter @Accessors(fluent = true)
 public class ByteBufWrapper {
 
     private final ByteBuf buf;
-
-    public ByteBufWrapper(ByteBuf buf) {
-        this.buf = buf;
-    }
 
     public void writeVarInt(int b) {
         while ((b & 0xFFFFFF80) != 0x0) {
@@ -71,9 +71,5 @@ public class ByteBufWrapper {
         long mostSigBits = this.buf.readLong();
         long leastSigBits = this.buf.readLong();
         return new UUID(mostSigBits, leastSigBits);
-    }
-
-    public ByteBuf buf() {
-        return this.buf;
     }
 }
