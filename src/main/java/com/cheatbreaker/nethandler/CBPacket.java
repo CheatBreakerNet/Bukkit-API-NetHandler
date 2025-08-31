@@ -117,6 +117,7 @@ public abstract class CBPacket {
         CBPacket.addPacket(25, CBPacketWorldBorder.class);
         CBPacket.addPacket(26, CBPacketWorldBorderUpdate.class);
         CBPacket.addPacket(27, CBPacketWorldBorderRemove.class);
+        CBPacket.addPacket(28, CBPacketSwingInhibitorUpdate.class);
     }
 
 }

@@ -39,6 +39,8 @@ public interface ICBNetHandlerClient extends ICBNetHandler {
 
     void handleServerUpdate(CBPacketServerUpdate var1);
 
+    void handleSwingInhibitorUpdate(CBPacketSwingInhibitorUpdate var1);
+
     void handleWorldBorder(CBPacketWorldBorder var1);
 
     void handleWorldBorderUpdate(CBPacketWorldBorderUpdate var1);
